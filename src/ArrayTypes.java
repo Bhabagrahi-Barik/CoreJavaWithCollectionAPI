@@ -79,3 +79,13 @@ public class ArrayTypes {
 }
 //? In 3D ARRAY each array has the three dimensions ([block/layer][row][column].
 //? In Jagged Array during declaration time the no. of columns are not specified in the same lin.
+
+//!================== Traditional For loop Vs ForEach loop=========================
+
+//* Traditional for loop is index-based  but for-each loop is iterator-based.
+
+//* For standard arrays (int[]) and random-access collections like ArrayList, both loops execute with identical runtime performance. For sequential-access collections like LinkedList, using a traditional for loop with .get(i) degrades performance to O(N²) because it restarts scanning from the head element on every iteration. The for-each loop relies on an underlying iterator, keeping the traversal at O(N).
+
+//* In traditional for loop we can move from backward but in foreach loop we can't.
+
+//* Foreach loop makes code more readable, error reduction(that comes if the index position mismatch) .

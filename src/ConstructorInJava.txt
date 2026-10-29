@@ -1,0 +1,11 @@
+============================================= CONSTRUCTOR ==================================================
+1) We can make java constructor private when we want that our constructor is not accessible outside our class.
+
+2) We can't make our constructor static. Because we know that we can access static members without creating objects. And the purpose of constructor creation in a Java program is to create an object(new Employee()) and initialize instance fields during this. But if we make our constructor static then we can access it directly or by classname, we don't need to create object which contradicts with purpose of constructor creation. So due to this we can't make our constructor static.
+
+3) We can't make our constructor final. Because if we make our constructor or a method final that means we can't override it. Again to override something we need the same signature in child class, but we know that constructor names are same with the class name, so in child class the constructor name must be according the child class. Due to this we can't override constructor.
+                            So if we can't override a constructor in java then for the same thing making the constructor final doesn't make a sense.
+
+4) We can't make a constructor abstract. Because if we make something abstract then we need to provide its implementation in child class by overriding it, but we know that we can't override a constructor. So again making a constructor abstract doesn't make a sense.
+
+5) We can overload a constructor(using parameters that differs), but can't override a constructor in java.

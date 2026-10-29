@@ -1,0 +1,63 @@
+1. The Core Distinction: "Inheritance represents an IS-A relationship (e.g., a Tesla is a Car), which creates tight coupling between classes."
+2. What HAS-A Means: "A HAS-A relationship relies on Composition or Aggregation, meaning we hold a reference to another object inside our class instead of extending it."
+3. Why it's Better: "This promotes the design principle 'Favor composition over inheritance' because it keeps the code loosely coupled, reduces dependencies, and allows us to swap implementations at runtime."
+
+=========================== IS-A AND HAS-A RELATIONSHIP ========================================
+We can say that inheritance in java represents IS-A relationship which shows a class is a specific type of another class (a Cat is a type of Animal). We can say that here the tight coupling takes place between these two classes means if we modify the parent then those internal implementations of parent present inside the child is modified.
+
+                            But there is another relationship that is HAS-A relationship that
+                            works on the principle of composition or aggregation means one class composes of another classes as a part of it (An Engine is a part of a Car). So it prevent
+
+EX:-   ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐  (HAS-A RELATIONSHIP)  ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+        interface Engine{
+            void show();
+        }
+
+        class ElectricEngine implements Engine{
+            String name;
+
+            ElectricEngine(String name){
+                this.name=name;
+            }
+
+            public void show(){
+                System.out.println("This is electric engine");
+            }
+        }
+
+        class PetrolEngine implements Engine{
+            String name;
+
+            PetrolEngine(String name){
+                this.name=name;
+            }
+
+            public void show(){
+                System.out.println("This is Petrol engine");
+            }
+        }
+
+        class Car{
+            Engine engine;
+
+            Car(Engine engine){
+                this.engine=engine;
+            }
+
+            public void display(){
+                engine.show();
+            }
+        }
+
+        public class InheritanceInJava {
+            public static void main(String[] args) {
+                Engine electricEngine = new ElectricEngine("BMW");
+                Car car = new Car(electricEngine);
+                car.display();
+            }
+        }
+
+In inheritance(IS-A) relationship if you change a method signature, variable name, or the internal logic inside the parent class, every single child class immediately breaks or changes its behavior down the entire chain. The child class cannot isolate itself from its parent's implementation details.
+
+But Has-a relationship It proves the system is loosely coupled because you can change, add, or swap engine implementations without modifying a single line of code inside the Car class. And also if the parent(Car) not exist then also the engines can exist independently.
+

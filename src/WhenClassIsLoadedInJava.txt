@@ -1,0 +1,15 @@
+We know the static members(variables) are get memory in jvm only once during the class loading before the object creation even before the constructor is called. Static blocks are executed first during the class loading before the constructor call.
+
+But when the class is loaded and who loads the class:
+    When JVM finds the active use case of our class after compilation,then it loads the class in below scenarios:
+      1) When you use the new keyword (e.g., new Employee()), the JVM loads, links, and initializes the class before allocating memory for the object.
+
+      2)  Accessing a static field, modifying a static field, or calling a static method triggers class loading. Note: The only exception is if the static field is a compile-time constant (a static final primitive or String). In that case, the compiler inlines the value, and the class is not loaded.
+
+      3)  Calling Class.forName("Employee") by default loads and initializes the class. If you ever want to load it without initializing it, you can use the overloaded version: Class.forName("Employee", false, classLoader).
+
+      4) Main Method execution: The class containing the main(String[] args) method that starts the application.
+
+      5) Subclass initialization: When a subclass is initialized, its superclass is automatically initialized first.
+
+      6) Reflection: Using methods in java.lang.reflect to inspect or manipulate the class.

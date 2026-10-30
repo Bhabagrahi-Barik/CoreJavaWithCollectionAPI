@@ -1,0 +1,13 @@
+==================================== Abstraction Vs Encapsulation ====================================
+
+1) Encapsulation is the process of hiding data and implementation details from the outside worlds. It encapsulates/bundles data and the implementation details so the unauthorized access of outside world can't change it's internal state.
+
+Where as the Abstraction is the process of hiding complexities at design level. It focuses on what an object can do rether that how it does it.
+
+2) Abstraction focuses on Hiding complexity at Design level whereas	Encapsulation focuses on Hiding data and state at Implementation level .
+
+3)Abstraction focuses on What an object does whereas Encapsulation focuses on How data is kept safe and structured .
+
+4) Example of Abstraction:- A TV Remote: You press the power button (what it does) without needing to know the infrared circuit board layout (how it works).
+
+Example of Encapsulation:- A Capsule / Safe Box: Your sensitive data (like a bank balance) is locked inside a secure container, and you can only interact with it through controlled methods (like deposit() or withdraw()).

@@ -8,6 +8,12 @@ Where as the Abstraction is the process of hiding complexities at design level. 
 
 3)Abstraction focuses on What an object does whereas Encapsulation focuses on How data is kept safe and structured .
 
-4) Example of Abstraction:- A TV Remote: You press the power button (what it does) without needing to know the infrared circuit board layout (how it works).
+4) Abstraction in java is achieved through interface and abstract keyword, whereas encapsulation is achieved through private keyword and access those private fields through public getter and setter methods.
+
+5) Example of Abstraction:- A TV Remote: You press the power button (what it does) without needing to know the infrared circuit board layout (how it works).
 
 Example of Encapsulation:- A Capsule / Safe Box: Your sensitive data (like a bank balance) is locked inside a secure container, and you can only interact with it through controlled methods (like deposit() or withdraw()).
+
+
+
+Accessor methods(getter -> as we access through it) AND Mutator methods(setter -> as we mutate/ change through it)

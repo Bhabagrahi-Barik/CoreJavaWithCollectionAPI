@@ -29,4 +29,25 @@ public class ObjectCasting {
 
                         //? 2) DownCasting ->  process where the reference of Parent object is assigned to the reference of Child. It is known as Narrowing casting. It is not safe, because while performing narrowing casting we need to make sure the source type(parent reference which hold child object as of upcasting) hold the actual object of target type(Child type). If type mismatch happens then we get "ClassCastException". So before performing narrowing casting we need to conform that the source reference(the object going to change) is the actual object of target type or not using the "instanceOf" operator.
 
-//? instanceOf operator in java checks whether an object belongs to a class, any of it's subclass, or an interface at runtime or not. Returns boolean result.
+/* todo In Java, the instanceof operator is used to test whether an object is an instance of a specific class, a subclass, or implements a particular interface.
+
+**Ex:-
+
+        Animal myAnimal = new Animal()
+        Dog myDog = new Dog();
+
+        System.out.println(myAnimal instanceof Dog); (false)
+        System.out.println(myDog instanceof Animal);  (true)
+        System.out.println(myDog instanceof Dog); (true)
+
+todo Just like with classes, the instanceof operator can also be used with interfaces in Java.It checks whether an object's class implements a specific interface (or inherits from a class that implements it). It still returns true or false.
+
+***Ex:-
+        Bird myBird = new Bird();
+        Car myCar = new Car();
+
+        System.out.println(myBird instanceof Flyable);
+        Output: true (Because Bird implements Flyable)
+
+        System.out.println(myCar instanceof Flyable);
+        Output: false (Car does not implement Flyable) */
